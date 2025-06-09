@@ -1,0 +1,40 @@
+-- Cleanup script - Drop existing objects in correct order
+-- Run this before creating new schema
+
+BEGIN
+    -- Drop sequences
+    EXECUTE IMMEDIATE 'DROP SEQUENCE permission_seq';
+EXCEPTION
+    WHEN OTHERS THEN NULL;
+END;
+/
+
+BEGIN
+    EXECUTE IMMEDIATE 'DROP SEQUENCE event_seq';
+EXCEPTION
+    WHEN OTHERS THEN NULL;
+END;
+/
+
+BEGIN
+    EXECUTE IMMEDIATE 'DROP SEQUENCE organiser_seq';
+EXCEPTION
+    WHEN OTHERS THEN NULL;
+END;
+/
+
+-- Drop tables in correct order (respecting foreign key dependencies)
+BEGIN
+    EXECUTE IMMEDIATE 'DROP TABLE PERMISSION';
+    EXECUTE IMMEDIATE 'DROP TABLE PERMISSION_SCHEDULE';
+    EXECUTE IMMEDIATE 'DROP TABLE BUDGET';
+    EXECUTE IMMEDIATE 'DROP TABLE ORGANISED_BY';
+    EXECUTE IMMEDIATE 'DROP TABLE EVENT';
+    EXECUTE IMMEDIATE 'DROP TABLE ORGANISER';
+EXCEPTION
+    WHEN OTHERS THEN
+        NULL; 
+END;
+/
+
+PROMPT Schema cleanup completed.
