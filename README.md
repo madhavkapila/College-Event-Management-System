@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <body>
-  <h1>College Event Management System <span class="badge">GNU License</span></h1>
+  <h1>College Event Management System</h1>
   <p><em>Robust PL/SQL database module for managing student society events at Thapar Institute of Engineering and Technology with a clear path to full-stack integration.</em></p>
 
   <div class="section">
