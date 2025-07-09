@@ -55,10 +55,18 @@ You can also install components individually in the following order:
    @logic/04_procedures.sql
    ```
 
-4. **Sample Data** (optional):
+4. **Run full script**
+   ```cd Database/deployment
+      sql your_user/your_pass@//host:1521/your_service @init.sql
+      sql your_user/your_pass@//host:1521/your_service @../tools/event_mgmt_cli.sql
+   ```
+
+<!-- OLd METHOD -->
+<!-- 4. **Sample Data** (optional):
    ```sql
    @sample_data/test_data.sql
-   ```
+   ``` -->
+
 
 ## Usage
 
