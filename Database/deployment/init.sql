@@ -46,3 +46,9 @@ PROMPT =============================================
 -- @@../sample_data/test_data.sql
 
 PROMPT To load sample data, run: @../sample_data/test_data.sql
+
+PROMPT To launch the interactive CLI, run:
+PROMPT    SQL> @../tools/event_mgmt_cli.sql
+
+-- If you’d prefer it to run automatically at the end of init:
+-- @@../tools/event_mgmt_cli.sql
