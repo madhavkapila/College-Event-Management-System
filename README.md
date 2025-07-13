@@ -32,6 +32,8 @@
 │   └── init.sql            # Runs schema & logic scripts
 ├── sample_data/            # Sample inserts for testing
 │   └── test_data.sql       # Test data
+├── tools/                  # Tools to run and manage system
+│   └── event_mgmt_cli.sql  #CLI script
 └── College_Event_Management_System_PLSQL.sql  # Monolithic script
 </code></pre>
   </div>
@@ -59,6 +61,7 @@
           <li><code>@logic/04_procedures.sql</code></li>
           <li>(Optional) <code>@sample_data/test_data.sql</code></li>
         </ul>
+        <li><code>Run @../tools/event_mgmt_cli.sql</code></li>
       </li>
     </ol>
  
